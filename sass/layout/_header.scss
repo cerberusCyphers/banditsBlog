@@ -1,0 +1,206 @@
+.header {
+	background-image: linear-gradient($color-black-faded, $color-black-faded),
+		url('../img/Landscape-banner-resize.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.main__header--nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+	@media only screen and (max-width: $bp-md) {
+		padding: 2rem 0;
+	}
+
+	& img {
+		width: 14rem;
+		border-radius: 50%;
+		padding: 0 3rem;
+		@media only screen and (max-width: $bp-md) {
+			width: 12rem;
+		}
+		@media only screen and (max-width: $bp-sm) {
+			width: 10rem;
+		}
+		@media only screen and (max-width: $bp-xs) {
+			width: 9rem;
+		}
+	}
+
+	& ul {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+	}
+
+	& li {
+		display: flex;
+		align-self: center;
+		padding: 0 3rem;
+		@media only screen and (max-width: $bp-md) {
+			padding: 0 2rem;
+		}
+		@media only screen and (max-width: $bp-sm) {
+			padding: 0 1rem;
+		}
+		@media only screen and (max-width: $bp-xs) {
+			padding: 0 0.5rem;
+		}
+	}
+
+	& a {
+		color: $color-secondary;
+		font-size: 3rem;
+
+		@media only screen and (max-width: $bp-lg) {
+			font-size: 2.5rem;
+		}
+		@media only screen and (max-width: $bp-md) {
+			font-size: 2rem;
+		}
+		@media only screen and (max-width: $bp-sm) {
+			font-size: 1.8rem;
+		}
+		@media only screen and (max-width: $bp-xs) {
+			font-size: 1.5rem;
+		}
+	}
+
+	& a:hover,
+	a:active {
+		color: $color-primary-light;
+	}
+}
+
+// .mobile__header {
+// 	display: grid;
+// 	// padding: 2rem;
+
+// 	@media only screen and (min-width: $bp-md) {
+// 		display: none;
+// 	}
+
+// 	& img {
+// 		width: 14rem;
+// 		border-radius: 50%;
+// 		padding: 0 3rem;
+// 	}
+
+// 	&--nav {
+// 		grid-column: 2 / 3;
+// 		grid-row: 2 / 3;
+// 		justify-self: center;
+// 		display: grid;
+// 		grid-template-columns: repeat(5, 20%);
+// 		grid-gap: 0.5rem;
+// 		justify-content: center;
+
+// 		&-about {
+// 			grid-column: 5 / 6;
+// 			grid-row: 2 / 3;
+// 		}
+// 		&-blog {
+// 			grid-column: 5 / 6;
+// 			grid-row: 3 / 4;
+// 		}
+// 		&-edit {
+// 			grid-column: 5 / 6;
+// 			grid-row: 4 / 5;
+// 		}
+// 		&-add {
+// 			grid-column: 5 / 6;
+// 			grid-row: 5 / 6;
+// 		}
+// 		&-login {
+// 			grid-column: 5 / 6;
+// 			grid-row: 6 / 7;
+// 		}
+// 		&-signup {
+// 			grid-column: 5 / 6;
+// 			grid-row: 7 / 8;
+// 		}
+// 		&-logout {
+// 			grid-column: 5 / 6;
+// 			grid-row: 8 / 9;
+// 		}
+
+// 		& a {
+// 			color: $color-secondary;
+// 			font-size: 2.7rem;
+
+// 			@media only screen and (max-width: $bp-lg) {
+// 				font-size: 2.5rem;
+// 			}
+// 		}
+
+// 		& a:hover,
+// 		a:active {
+// 			color: $color-primary-light;
+// 		}
+// 	}
+
+// 	&--checkbox {
+// 		grid-column: 2 / 3;
+// 		justify-self: center;
+// 		padding-right: 6rem;
+
+// 		@media only screen and (min-width: $bp-md) {
+// 			display: none;
+// 		}
+
+// 		& input {
+// 			display: none;
+
+// 			&:checked ~ label {
+// 				color: $color-primary;
+// 			}
+// 		}
+
+// 		&--checkbox:checked ~ &--nav {
+// 			display: none;
+// 			// this isn't working
+// 		}
+
+// 		& label {
+// 			font-size: 5rem;
+// 			color: $color-secondary;
+// 		}
+// 	}
+// }
+
+.active {
+	padding: 0.6rem;
+	border-radius: 25%;
+	box-shadow: -3px -3px 5px $color-secondary;
+}
+.active:hover,
+.active:active {
+	box-shadow: 3px 3px 5px $color-primary-light;
+}
+
+.btn-logout {
+	font-size: 3rem;
+	font-weight: 600;
+	color: $color-secondary;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	@media only screen and (max-width: $bp-lg) {
+		font-size: 2.5rem;
+	}
+	@media only screen and (max-width: $bp-md) {
+		font-size: 2rem;
+	}
+	@media only screen and (max-width: $bp-sm) {
+		font-size: 1.8rem;
+	}
+	@media only screen and (max-width: $bp-xs) {
+		font-size: 1.5rem;
+	}
+}
+.btn-logout:hover,
+.btn-logout:active {
+	color: $color-primary-light;
+}

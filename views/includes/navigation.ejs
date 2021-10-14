@@ -1,0 +1,78 @@
+<header class="header">
+  <nav class="main__header--nav">
+    <img src="../../img/logo.jpg" alt="bandit-logo" class="main-header--logo" />
+    <ul class="main__header--nav-list">
+      <li class="main__header--nav-link">
+        <a href="/" <%=path==='/' ? 'class=active' : '' %>>About</a>
+      </li>
+      <li class="main__header--nav-link">
+        <a href="/blog" <%=path==='/blog' ? 'class=active' : '' %>>Blog</a>
+      </li>
+      <% if (isAdmin) { %>
+        <li class="main__header--nav-link">
+          <a href="/admin/blogs" <%=path==='/admin/blogs' ? 'class=active' : '' %>>Edit</a>
+        </li>
+        <li class="main__header--nav-link">
+          <a href="/admin/entry" <%=path==='/admin/entry' ? 'class=active' : '' %>>Add</a>
+        </li>
+        <% } %>
+    </ul>
+    <ul class="main__header--access">
+      <% if (!isAuthenticated) { %>
+        <li class="main__header--access-link">
+          <a href="/login" <%=path==='/login' ? 'class=active' : '' %>>Login</a>
+        </li>
+        <li class="main__header--access-link">
+          <a href="/signup" <%=path==='/signup' ? 'class=active' : '' %>>Sign Up</a>
+        </li>
+        <% } else { %>
+          <li class="main__header--access-link">
+            <form action="/logout" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+              <button class="btn-logout" type="submit">Logout</button>
+            </form>
+          </li>
+          <% } %>
+    </ul>
+  </nav>
+  <!-- <nav class="mobile__header">
+		<img src="../../img/logo.jpg" alt="bandit-logo" class="main-header--logo" />
+		<ul class="mobile__header--nav">
+			<li class="mobile__header--nav-about">
+				<a href="/" <%= path === '/' ? 'class=active' : '' %>>About</a>
+			</li>
+			<li class="mobile__header--nav-blog">
+				<a href="/blog" <%= path === '/blog' ? 'class=active' : '' %>>Blog</a>
+			</li>
+			<% if (isAuthenticated) { %>
+				<li class="mobile__header--nav-edit">
+					<a href="/admin/blogs" <%= path === '/admin/blogs' ? 'class=active' : '' %>>Edit</a>
+				</li>
+				<li class="mobile__header--nav-add">
+					<a href="/admin/entry" <%= path === '/admin/entry' ? 'class=active' : '' %>>Add</a>
+				</li>
+			<% } %> -->
+  <!-- </ul>
+		<ul class="mobile__header--nav-list"> -->
+  <!-- <% if (!isAuthenticated) { %>
+			<li class="mobile__header--nav-login">
+				<a href="/login" <%= path === '/login' ? 'class=active' : '' %>>Login</a>
+			</li>
+			<li class="mobile__header--nav-signup">
+				<a href="/signup" <%= path === '/signup' ? 'class=active' : '' %>>Sign Up</a>
+			</li>
+			<% } else { %>
+				<li class="mobile__header--nav-logout">
+					<form action="/logout" method="POST">
+						<input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+						<button class="btn-logout" type="submit">Logout</button>
+					</form>
+				</li>
+				<% } %>
+		</ul>
+		<div class="mobile__header--checkbox">
+			<input class="checkbox__check" type="checkbox" id="paw-print">
+			<label class="checkbox__check-label" for="paw-print"><ion-icon name="paw"></ion-icon></label>
+		</div>
+	</nav> -->
+</header>

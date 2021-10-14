@@ -1,0 +1,53 @@
+<%- include('../includes/head.ejs') %>
+  <script src="/js/blog.js" defer></script>
+  </head>
+
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+
+      <main>
+        <% if (blogs.length> 0) { %>
+          <div class="blog">
+            <% for (let blog of blogs.sort((a, b)=> {
+              return b.date - a.date
+              } )) { %>
+              <article class="card blog-post">
+                <header class="card__title">
+                  <h1 class="blog__title">
+                    <%= blog.title %>
+                  </h1>
+                </header>
+                <div class="card__date">
+                  <h2 class="blog__date">
+                    <%= blog.date.toDateString() %>
+                  </h2>
+                </div>
+                <div class="card__message">
+                  <p class="blog__msg">
+                    <%= blog.message %>
+                  </p>
+                </div>
+                <div class="card__image">
+                  <img class="blog__img" src="<%= blog.imageUrl %>" alt="<%= blog.title %>">
+                </div>
+                <div class="card__like">
+                  <i class="blog__like" id="<%= blog._id %>">
+                    <ion-icon class="blog__like--thumb" name="thumbs-up-outline"></ion-icon>
+                  </i>
+                  <sup class="blog__like--counter">
+                    <%= blog.likes.length %>
+                  </sup>
+                </div>
+              </article>
+
+              <% } %>
+          </div>
+          <% } else { %>
+            <h1 class="no-entries">No Entries Found!</h1>
+            <% } %>
+      </main>
+
+      <%- include('../includes/pagination.ejs') %>
+
+        <%- include('../includes/footer.ejs') %>
+  </body>

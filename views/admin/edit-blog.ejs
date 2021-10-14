@@ -1,0 +1,40 @@
+<%- include('../includes/head.ejs') %>
+  </head>
+
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+      <main>
+        <form action="/admin/<% if (editing) { %>edit<% } else { %>entry<% } %>" class="form" method="POST"
+          enctype="multipart/form-data">
+          <div class="form-control">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title"
+              value="<% if (editing || hasError) { %><%= blogPost.title %><% } %>">
+          </div>
+          <div class="form-control">
+            <label for="date">Date</label>
+            <input type="datetime-local" name="date" id="date"
+              value="<% if (editing || hasError) { %><%= blogPost.date %><% } %>">
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="50"
+              rows="5"><% if (editing || hasError) { %><%= blogPost.message %><% } %></textarea>
+          </div>
+          <div class="form-control">
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image">
+          </div>
+          <% if (editing) { %>
+            <input type="hidden" value="<%= blogPost._id %>" name="blogPostId">
+            <% } %>
+
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+              <button class="btn" type="submit">
+                <% if (editing) { %>Update<% } else { %>Add Post<% } %>
+              </button>
+        </form>
+      </main>
+      <%- include('../includes/footer.ejs') %>
+
+  </body>

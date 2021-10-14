@@ -1,0 +1,75 @@
+.footer {
+	background-color: $color-grey-dark;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5rem 3rem;
+	transition: all 0.2s;
+
+	&__nav-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		& li {
+			padding: 1.5rem 6rem;
+
+			@media only screen and (max-width: $bp-xs) {
+				padding: 1.5rem 4rem;
+			}
+		}
+
+		& a {
+			color: $color-white-primary;
+			font-size: 4rem;
+
+			@media only screen and (max-width: $bp-xs) {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	&__nav--link {
+		&-ig:hover,
+		&-ig:active {
+			color: $color-social-ig;
+			transform: scale(105%);
+		}
+		&-fb:hover,
+		&-fb:active {
+			color: $color-social-fb;
+			transform: scale(105%);
+		}
+		&-yt:hover,
+		&-yt:active {
+			color: $color-social-yt;
+			transform: scale(105%);
+		}
+	}
+
+	&__copyright {
+		display: flex;
+		justify-content: center;
+		font-size: 2rem;
+
+		@media only screen and (max-width: $bp-sm) {
+			font-size: 1.6rem;
+		}
+		@media only screen and (max-width: $bp-xs) {
+			font-size: 1.3rem;
+		}
+		@media only screen and (max-width: $bp-xxs) {
+			font-size: 1.1rem;
+		}
+
+		& a {
+			color: $color-primary-dark;
+			padding: 1.5rem 0;
+		}
+
+		& a:hover,
+		& a:active {
+			color: $color-secondary-dark;
+		}
+	}
+}
