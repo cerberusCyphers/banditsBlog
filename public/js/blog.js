@@ -21,54 +21,8 @@ const likeClickHandler = e => {
 		likeCounter.innerText = likes;
 
 		const thumb = likeParent.getElementsByTagName('ion-icon')[0];
-		thumb.setAttribute('name', 'thumbs-up');
+		thumb.setAttribute('name', 'paw');
 	}
 };
 
 document.addEventListener('click', likeClickHandler, false);
-
-// ----------------------------------------------------------------------- //
-
-//! Function only runs when clicking i element - doesn't register on ion-icon element
-// const clickLikeHandler = event => {
-// 	if (event.target.parentNode.classList.contains('card__like')) {
-// 		console.log(event.target);
-// 		const likeCounter = event.target.parentNode.getElementsByTagName('sup')[0];
-// 		let likes = parseInt(likeCounter.innerText);
-// 		likes++;
-// 		likeCounter.innerText = likes;
-// 		console.log(likes);
-
-// 		const thumb = event.target.parentNode.getElementsByTagName('i')[0];
-// 		thumb.innerHTML = '<ion-icon name="thumbs-up"></ion-icon>';
-// 	}
-// };
-
-// document.addEventListener('click', clickLikeHandler, false);
-
-// ----------------------------------------------------------------------- //
-
-//! Only works on first instance & querySelectorAll errors as not a function
-// const thumb = document.querySelector('.blog__like--thumb');
-// const counter = document.querySelector('.blog__like--counter');
-
-// const likeClickHandler = e => {
-// 	e.preventDefault();
-// 	let likes = parseInt(counter.innerText);
-// 	likes++;
-// 	counter.innerText = likes;
-
-// 	thumb.setAttribute('name', 'thumbs-up');
-// 	thumb.classList.replace('blog__like--thumb', 'blog__like--clicked');
-// 	console.log(thumb, likes);
-// };
-
-// document.addEventListener('click', likeClickHandler);
-
-// ----------------------------------------------------------------------- //
-
-//              div
-
-//    i                       sup
-
-// ion-icon
