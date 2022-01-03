@@ -563,38 +563,38 @@ footer {
           font-size: 3rem; } }
   /* line 33, sass/layout/_footer.scss */
   .footer__nav--link-ig:hover, .footer__nav--link-ig:active {
-    color: #8134af;
-    transform: scale(105%); }
-  /* line 38, sass/layout/_footer.scss */
+    color: #8134af; }
+  /* line 37, sass/layout/_footer.scss */
   .footer__nav--link-fb:hover, .footer__nav--link-fb:active {
-    color: #3b5999;
-    transform: scale(105%); }
-  /* line 43, sass/layout/_footer.scss */
+    color: #3b5999; }
+  /* line 41, sass/layout/_footer.scss */
   .footer__nav--link-yt:hover, .footer__nav--link-yt:active {
-    color: #e62117;
-    transform: scale(105%); }
-  /* line 50, sass/layout/_footer.scss */
+    color: #e62117; }
+  /* line 45, sass/layout/_footer.scss */
+  .footer__nav--link-tt:hover, .footer__nav--link-tt:active {
+    color: #69c9d0; }
+  /* line 51, sass/layout/_footer.scss */
   .footer__copyright {
     display: flex;
     justify-content: center;
     font-size: 2rem; }
     @media only screen and (max-width: 37.5em) {
-      /* line 50, sass/layout/_footer.scss */
+      /* line 51, sass/layout/_footer.scss */
       .footer__copyright {
         font-size: 1.6rem; } }
     @media only screen and (max-width: 31.25em) {
-      /* line 50, sass/layout/_footer.scss */
+      /* line 51, sass/layout/_footer.scss */
       .footer__copyright {
         font-size: 1.3rem; } }
     @media only screen and (max-width: 25em) {
-      /* line 50, sass/layout/_footer.scss */
+      /* line 51, sass/layout/_footer.scss */
       .footer__copyright {
         font-size: 1.1rem; } }
-    /* line 65, sass/layout/_footer.scss */
+    /* line 66, sass/layout/_footer.scss */
     .footer__copyright a {
       color: #013c23;
       padding: 1.5rem 0; }
-    /* line 70, sass/layout/_footer.scss */
+    /* line 71, sass/layout/_footer.scss */
     .footer__copyright a:hover,
     .footer__copyright a:active {
       color: #ff5300; }
