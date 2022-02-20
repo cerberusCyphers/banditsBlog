@@ -1,0 +1,8 @@
+.user-message {
+	&--error {
+		font-size: 1.5rem;
+		color: red;
+		border: 1px solid $color-red;
+		box-shadow: 1rem 2rem 3rem $color-black;
+	}
+}
