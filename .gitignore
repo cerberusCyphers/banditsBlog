@@ -2,3 +2,4 @@ node_modules
 aws-s3.txt
 nodemon.json
 access.log
+banditsDB.txt
