@@ -1,23 +1,30 @@
 <%- include('../includes/head.ejs') %>
-</head>
+  </head>
 
-<body>
-  <%- include('../includes/navigation.ejs') %>
-  <main>
-    <form action="/login" class="form" method="POST">
-      <div class="form-control">
-        <label for="email">Email</label>
-        <input class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>" placeholder="your@email.com" type="text" name="email" id="email" value="<%= oldInput.email %>">
-      </div>
-      <div class="form-control">
-        <label for="password">Password</label>
-        <input class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>" placeholder="password" type="password" name="password" id="password" value="<%= oldInput.password %>">
-      </div>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+      <main>
+        <% if (errorMessage) { %>
+          <div class="user-message user-message--error">
+            <%= errorMessage %>
+          </div>
+          <% } %>
+            <form action="/login" class="form" method="POST">
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>"
+                  placeholder="your@email.com" type="text" name="email" id="email" value="<%= oldInput.email %>">
+              </div>
+              <div class="form-control">
+                <label for="password">Password</label>
+                <input class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>"
+                  placeholder="password" type="password" name="password" id="password" value="<%= oldInput.password %>">
+              </div>
 
-      <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
-      <button class="btn" type="submit">Login</button>
-    </form>
-  </main>
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+              <button class="btn" type="submit">Login</button>
+            </form>
+      </main>
 
-  <%- include('../includes/footer.ejs') %>
-</body>
+      <%- include('../includes/footer.ejs') %>
+  </body>
