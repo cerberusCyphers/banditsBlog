@@ -1,8 +1,12 @@
 .user-message {
+	width: 60rem;
+	padding: 1rem;
+	letter-spacing: 3px;
+	border-radius: 5px;
 	&--error {
 		font-size: 1.5rem;
 		color: red;
-		border: 1px solid $color-red;
-		box-shadow: 1rem 2rem 3rem $color-black;
+		border: 1px solid red;
+		box-shadow: 4px 2px 16px rgba(255, 0, 0, 0.493);
 	}
 }
