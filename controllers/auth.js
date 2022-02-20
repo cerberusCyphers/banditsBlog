@@ -125,7 +125,7 @@ exports.postSignup = (req, res, next) => {
 	}
 	User.findOne({ email: email })
 		.then(user => {
-			if (!user) {
+			if (user) {
 				return res.status(422).render('auth/signup', {
 					path: '/signup',
 					pageTitle: 'Signup',
