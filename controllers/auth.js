@@ -123,23 +123,39 @@ exports.postSignup = (req, res, next) => {
 			validationErrors: errors.array(),
 		});
 	}
-	return bcrypt
-		.hash(password, 12)
-		.then(hashedPassword => {
-			const user = new User({
-				email: email,
-				password: hashedPassword,
-				admin: false,
-				likedPosts: [],
-				cart: { items: [] },
-			});
-			return user.save();
-		})
-		.then(result => {
-			res.redirect('/login');
-		})
-		.catch(err => {
-			console.log(err);
+	User.findOne({ email: email })
+		.then(user => {
+			if (!user) {
+				return res.status(422).render('auth/signup', {
+					path: '/signup',
+					pageTitle: 'Signup',
+					errorMessage: 'Email already added. Please try another.',
+					oldInput: {
+						email: email,
+						password: password,
+						confirmPassword: req.body.confirmPassword,
+					},
+					validationErrors: [],
+				});
+			}
+			return bcrypt
+				.hash(password, 12)
+				.then(hashedPassword => {
+					const user = new User({
+						email: email,
+						password: hashedPassword,
+						admin: false,
+						likedPosts: [],
+						cart: { items: [] },
+					});
+					return user.save();
+				})
+				.then(result => {
+					res.redirect('/login');
+				})
+				.catch(err => {
+					console.log(err);
+				});
 		})
 		.catch(err => {
 			console.log(err);
