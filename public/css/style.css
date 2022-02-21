@@ -172,11 +172,16 @@
   padding: 5rem 3rem;
   margin: 5rem;
   font-size: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    /* line 1, sass/components/_form.scss */
+    .form {
+      width: 85%;
+      margin: 0; } }
 
-/* line 12, sass/components/_form.scss */
+/* line 17, sass/components/_form.scss */
 .form-control {
   padding-bottom: 1.5rem; }
-  /* line 15, sass/components/_form.scss */
+  /* line 20, sass/components/_form.scss */
   .form-control label,
   .form-control input,
   .form-control textarea {
@@ -184,7 +189,7 @@
     width: 100%;
     font: inherit; }
 
-/* line 24, sass/components/_form.scss */
+/* line 29, sass/components/_form.scss */
 .btn {
   display: inline-block;
   padding: 0.25rem 1rem;
@@ -198,7 +203,7 @@
   cursor: pointer;
   transition: all 0.6s; }
 
-/* line 38, sass/components/_form.scss */
+/* line 43, sass/components/_form.scss */
 .btn:hover,
 .btn:active {
   background-color: #277453;
@@ -301,7 +306,11 @@
   padding: 1rem;
   letter-spacing: 3px;
   border-radius: 5px; }
-  /* line 6, sass/components/_messages.scss */
+  @media only screen and (max-width: 56.25em) {
+    /* line 1, sass/components/_messages.scss */
+    .user-message {
+      width: 85%; } }
+  /* line 10, sass/components/_messages.scss */
   .user-message--error {
     font-size: 1.5rem;
     color: red;
@@ -553,62 +562,74 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 1.5rem 3rem;
   transition: all 0.2s; }
-  /* line 9, sass/layout/_footer.scss */
+  /* line 10, sass/layout/_footer.scss */
   .footer__nav-list {
     display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    /* line 14, sass/layout/_footer.scss */
+    justify-content: space-evenly;
+    align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      /* line 10, sass/layout/_footer.scss */
+      .footer__nav-list {
+        padding: 0; } }
+    /* line 18, sass/layout/_footer.scss */
     .footer__nav-list li {
       padding: 1.5rem 6rem; }
-      @media only screen and (max-width: 31.25em) {
-        /* line 14, sass/layout/_footer.scss */
+      @media only screen and (max-width: 56.25em) {
+        /* line 18, sass/layout/_footer.scss */
         .footer__nav-list li {
           padding: 1.5rem 4rem; } }
-    /* line 22, sass/layout/_footer.scss */
+      @media only screen and (max-width: 31.25em) {
+        /* line 18, sass/layout/_footer.scss */
+        .footer__nav-list li {
+          padding: 1.5rem 2rem; } }
+    /* line 29, sass/layout/_footer.scss */
     .footer__nav-list a {
       color: #e9fff6;
       font-size: 4rem; }
       @media only screen and (max-width: 31.25em) {
-        /* line 22, sass/layout/_footer.scss */
+        /* line 29, sass/layout/_footer.scss */
         .footer__nav-list a {
           font-size: 3rem; } }
-  /* line 33, sass/layout/_footer.scss */
-  .footer__nav--link-ig:hover, .footer__nav--link-ig:active {
-    color: #8134af; }
-  /* line 37, sass/layout/_footer.scss */
-  .footer__nav--link-fb:hover, .footer__nav--link-fb:active {
-    color: #3b5999; }
-  /* line 41, sass/layout/_footer.scss */
-  .footer__nav--link-yt:hover, .footer__nav--link-yt:active {
-    color: #e62117; }
-  /* line 45, sass/layout/_footer.scss */
-  .footer__nav--link-tt:hover, .footer__nav--link-tt:active {
-    color: #69c9d0; }
-  /* line 51, sass/layout/_footer.scss */
+  /* line 39, sass/layout/_footer.scss */
+  .footer__nav--link {
+    width: 25%; }
+    /* line 42, sass/layout/_footer.scss */
+    .footer__nav--link-ig:hover, .footer__nav--link-ig:active {
+      color: #8134af; }
+    /* line 46, sass/layout/_footer.scss */
+    .footer__nav--link-fb:hover, .footer__nav--link-fb:active {
+      color: #3b5999; }
+    /* line 50, sass/layout/_footer.scss */
+    .footer__nav--link-yt:hover, .footer__nav--link-yt:active {
+      color: #e62117; }
+    /* line 54, sass/layout/_footer.scss */
+    .footer__nav--link-tt:hover, .footer__nav--link-tt:active {
+      color: #69c9d0; }
+  /* line 60, sass/layout/_footer.scss */
   .footer__copyright {
     display: flex;
     justify-content: center;
     font-size: 2rem; }
     @media only screen and (max-width: 37.5em) {
-      /* line 51, sass/layout/_footer.scss */
+      /* line 60, sass/layout/_footer.scss */
       .footer__copyright {
         font-size: 1.6rem; } }
     @media only screen and (max-width: 31.25em) {
-      /* line 51, sass/layout/_footer.scss */
+      /* line 60, sass/layout/_footer.scss */
       .footer__copyright {
         font-size: 1.3rem; } }
     @media only screen and (max-width: 25em) {
-      /* line 51, sass/layout/_footer.scss */
+      /* line 60, sass/layout/_footer.scss */
       .footer__copyright {
         font-size: 1.1rem; } }
-    /* line 66, sass/layout/_footer.scss */
+    /* line 75, sass/layout/_footer.scss */
     .footer__copyright a {
       color: #013c23;
       padding: 1.5rem 0; }
-    /* line 71, sass/layout/_footer.scss */
+    /* line 80, sass/layout/_footer.scss */
     .footer__copyright a:hover,
     .footer__copyright a:active {
       color: #ff5300; }

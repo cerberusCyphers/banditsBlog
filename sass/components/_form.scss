@@ -7,6 +7,11 @@
 	padding: 5rem 3rem;
 	margin: 5rem;
 	font-size: 2rem;
+
+	@media only screen and (max-width: $bp-md) {
+		width: 85%;
+		margin: 0;
+	}
 }
 
 .form-control {

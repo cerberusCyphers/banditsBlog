@@ -3,6 +3,10 @@
 	padding: 1rem;
 	letter-spacing: 3px;
 	border-radius: 5px;
+	@media only screen and (max-width: $bp-md) {
+		width: 85%;
+	}
+
 	&--error {
 		font-size: 1.5rem;
 		color: red;
